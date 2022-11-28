@@ -33,22 +33,19 @@ class User {
     }
 
     getInfo() {
-        return `ID: ${this.id}\nName: ${this.name}\nUsername: ${this.userName}\nEmail: ${this.email} `;
+        return `ID: ${this.id}\nName: ${this.name}\nUsername: ${this.userName}\nEmail: ${this.email}\n`;
     }
 }
 
-const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
-
-class Subscriber extends User {
+class Subscriber {
     #pages;
     #groups;
     #canMonetize;
 
-    constructor (id, name, userName, email, pages, groups, canMonetize) {
-      super(id, name, userName, email)
+    constructor (pages, groups, canMonetize) {
       this.#pages = pages;
       this.#groups = groups;
-      this.#canMonetize = canMonetize
+      this.#canMonetize = canMonetize;
     }
 
     get pages() {
@@ -64,8 +61,8 @@ class Subscriber extends User {
     }
 
     getInfo() {
-        return `User: ${super.getInfo()} Pages: ${this.pages} Groups: ${this.groups}\n Monetized: ${this.canMonetize}`;
+        return  `Pages: ${this.pages}\nGroups: ${this.groups}\nMonetized: ${this.canMonetize}\n`;
     }
 }
 
-export { User }
+export { User, Subscriber }

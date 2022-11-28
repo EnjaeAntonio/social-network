@@ -26,7 +26,6 @@ body {
 header {
     height: 56px;
     background-color: #1f2128;
-    overflow: hidden;
 }
 
 .flexbox {
@@ -78,11 +77,27 @@ nav ul li + li {
     margin-left: 18px;
 }
 
+.user-sub-info{
+    display: none;
+    position: absolute;
+    right: 225px;
+    text-align: left;
+    background-color: #fff;
+    padding: 15px;
+    width: 19%;
+}
+
+span {
+    font-size: 22px;
+    color: #607dbc;
+    font-weight: 600;
+}
+
 picture{
     display: grid;
     justify-content: right;
-    align-items: center;
     width: 25%;
+    margin-top: 8px;
 }
 
 img {

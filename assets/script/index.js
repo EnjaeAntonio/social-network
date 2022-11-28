@@ -2,7 +2,7 @@
 
 import {onEvent, select, selectAll, create, log} from './utils.js';
 
-import { User } from './User.js';
+import { User, Subscriber } from './User.js';
 
 /*****************************************
         Variables
@@ -12,17 +12,20 @@ const postText = select('.content-input');
 const postBtn = select('.post-btn');
 const parentPostContent = select('.post')
 const errorOutput = select('.error-output')
-
+const selectedFile = select('.file-upload')
 
 /*****************************************
         Creating new User
 *****************************************/
-function newUser() {
 
+const userInfo = select('.user-info');
 const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
-return user.getInfo()
-
-};
+userInfo.innerHTML = `
+        <p><span>ID: </span>${user.id}</p>
+        <p><span >Name: </span>${user.name}</p>
+        <p><span >User Name: </span>${user.userName}</p>
+        <p><span >Email: </span>${user.email}</p>
+`;
 
 
 
@@ -30,54 +33,45 @@ return user.getInfo()
 /*****************************************
         Creating new Subscriber
 *****************************************/
-function newSub() {
 
-        const sub = new Subscriber(3, 5, false)
-        
-        return sub.getInfo()
-        
-        };
+
+        const subInfo = select('.sub-info');
+        const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
+
+        subInfo.innerHTML = `
+        <p><span>Pages: </span>${sub.pages}</p>
+        <p><span>Groups: </span>${sub.groups}</p>
+        <p><span>Monetized: </span>${sub.canMonetize}</p>
+`;
+
 /*****************************************
         Post Content
 *****************************************/
 
-function userPost(){
+function userPost(selectedFile){
 
         let userPost = postText.value;
-
+        let todaysDate = new Date();
+        let img = select('.avatar').innerHTML;
+        // window.URL = window.URL || window.webkitURL;
+        // let url = URL.createObjectURL(selectedFile.files[0])
+        
         if (userPost == '') {
                 errorOutput.innerText = 'Fields are empty'
         } else {
 
-                // Creating content wrapper
-                let postContentWrapper = create('div');
-                postContentWrapper.className = 'content';
-                parentPostContent.prepend(postContentWrapper);
-
-                // Creating profile header
-                let postContentHeader = create('div');
-                postContentHeader.className = 'content-header';
-                postContentWrapper.append(postContentHeader);
-
-                let profilePic = create('img');
-                profilePic.src = "./assets/img/gokus.png";
-                postContentHeader.append(profilePic);
-
-                let userName = create('h1');
-                userName.innerText = 'Enjae Antonio'
-                postContentHeader.append(userName)
+                let newDiv = create('div');
+                newDiv.className = 'content'
+                newDiv.innerHTML = `
+                        <div class="content-header">
+                                ${img}
+                                <h1>${user.name}</h1>
+                                <p>${todaysDate.toDateString()}</p>
+                        </div>
+                        <p class="user-output">${postText.value}</p>
+                `
+                parentPostContent.prepend(newDiv)
                 
-                let date = create('p');
-                date.innerText = 'Nov 28, 2022';
-                postContentHeader.append(date)
-
-                // Inputting user content
-                let userContent = create('p');
-                userContent.className = 'user-output';
-                postContentWrapper.append(userContent)
-
-                userContent.innerText = `${postText.value}`
-                errorOutput.innerText = '';
         }
 
 }       
@@ -102,7 +96,18 @@ function showFileName( event ) {
   infoArea.textContent =  fileName;
 }
 
+
+let userInfoBtn = select('.info-btn')
+onEvent('click', userInfoBtn, function() {
+        let x = select('.user-sub-info');
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else 
+          x.style.display = "block";
+          newUser()
+          newSub()
+      });
+
 onEvent('click', postBtn, function(){
         userPost()
-        console.log(newUser())
 });
