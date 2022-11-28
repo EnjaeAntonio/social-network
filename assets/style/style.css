@@ -172,7 +172,8 @@ button:hover {
 }
 
 .content-header h1 {
-    display: inline;
+    font-weight: 400;
+    
 }
 
 .content-header p {
