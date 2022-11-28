@@ -112,8 +112,15 @@ form {
 }
 
 label {
-    width: 90%;
+    width: 50%;
     padding-top: 12px;
+}
+
+.btn-wrapper p {
+    width: 50%;
+    color: rgb(255, 0, 0);
+    font-size: 13px;
+    margin-top: 15px;
 }
 
 .fa-image {
@@ -160,6 +167,7 @@ button:hover {
 .content {
     background-color: #fff;
     width: 620px;
+    margin: 10px 0;
 }
 
 .content-header {
@@ -185,8 +193,8 @@ button:hover {
 .post-content {
     padding: 10px 0;
 }
-
-.post-content p{
+.user-output{
     background-color: #d5e4e9;
     padding: 10px 20px;
+    margin: 10px 20px;
 }

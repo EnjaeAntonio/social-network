@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/style/style.css" media="screen"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="assets/script/index.js" defer></script>
+        <script src="./assets/script/index.js" type="module"></script>
     </head>
     <body>
        <main>
@@ -23,7 +23,7 @@
                     <ul>
                         <li><a href="">Friends</a></li>
                         <li><a href="">Pages</a></li>
-                        <li><a href="">Marketlace</a></li>
+                        <li><a href="">Marketplace</a></li>
                         <li><a href="">My ads</a></li>
                         <li><a href="">Settings</a></li>
                     </ul>
@@ -49,7 +49,8 @@
                         </label>
 
                         <input id="file-upload" type="file"/>
-                        <button>Post</button>
+                        <p class="error-output"></p>
+                        <button type="button" class="post-btn">Post</button>
 
                     </div>
 
@@ -60,16 +61,14 @@
         </section>
 
         <section class="post container">
-            <div class="content">
+            <!-- <div class="content">
                 <div class="content-header">
                     <img src="./assets/img/gokus.png" alt="">
                     <h1>Enjae Antonio</h1>
                     <p>Nov 28, 2022</p>
                 </div>
-                <div class="post-content container">
-                    <p>Hows everyones day</p>
-                </div>
-            </div>
+                <p class="user-output">Hows everyones day</p>
+            </div> -->
         </section>
 
        </main>
