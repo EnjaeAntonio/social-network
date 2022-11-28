@@ -92,6 +92,19 @@ span {
     color: #607dbc;
     font-weight: 600;
 }
+/* .user-info p {
+    color: #fff;
+}
+
+.sub-info p {
+    color: #fff;
+} */
+
+h3 {
+    color: var(--app-green);
+    font-size: 24px;
+    margin: 10px 0;
+}
 
 picture{
     display: grid;

@@ -21,6 +21,7 @@ const selectedFile = select('.file-upload')
 const userInfo = select('.user-info');
 const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
 userInfo.innerHTML = `
+        <h3>Your Profile</h3>
         <p><span>ID: </span>${user.id}</p>
         <p><span >Name: </span>${user.name}</p>
         <p><span >User Name: </span>${user.userName}</p>
@@ -35,10 +36,10 @@ userInfo.innerHTML = `
 *****************************************/
 
 
-        const subInfo = select('.sub-info');
-        const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
-
-        subInfo.innerHTML = `
+const subInfo = select('.sub-info');
+const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
+subInfo.innerHTML = `
+        <h3>Subscribtior</h3>
         <p><span>Pages: </span>${sub.pages}</p>
         <p><span>Groups: </span>${sub.groups}</p>
         <p><span>Monetized: </span>${sub.canMonetize}</p>
@@ -69,7 +70,7 @@ function userPost(selectedFile){
                                 <p>${todaysDate.toDateString()}</p>
                         </div>
                         <p class="user-output">${postText.value}</p>
-                `
+                        `      
                 parentPostContent.prepend(newDiv)
                 
         }
