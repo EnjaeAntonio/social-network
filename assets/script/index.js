@@ -22,7 +22,7 @@ const userInfo = select('.user-info');
 const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
 
 userInfo.innerHTML = `
-        <h3>Your Profile</h3>
+        <h3>Profile</h3>
         <p><span>ID: </span>${user.id}</p>
         <p><span >Name: </span>${user.name}</p>
         <p><span >User Name: </span>${user.userName}</p>
