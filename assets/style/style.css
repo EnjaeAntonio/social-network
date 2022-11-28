@@ -17,3 +17,134 @@
 body {
     background-color: var(--app-dark-bg);
 }
+
+.container {
+    width: min(100% - 30px, 880px);
+    margin-inline: auto;
+}
+
+header {
+    height: 56px;
+    background-color: #1f2128;
+    overflow: hidden;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.title {
+    width: 25%;
+    height: 40px;
+}
+
+.title h1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #607dbc;
+    line-height: 56px;
+    letter-spacing: 0.2px;
+}
+
+nav {
+    width: 50%;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li{ 
+    display: inline;
+    line-height: 56px;
+    cursor: default;
+}
+
+nav ul li a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline #add8e6;
+}
+
+nav ul li + li {
+    margin-left: 18px;
+}
+
+picture{
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    width: 25%;
+}
+
+img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.post-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-wrapper{
+    background-color: #1f2128;
+    width: 100%;
+    padding: 12px 12px 12px 15px;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
+
+label {
+    width: 90%;
+    padding-top: 12px;
+}
+
+.fa-image {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+textarea {
+    background-color: #1f2128;
+    color: #fff;
+    resize: none;
+}
+
+.btn-wrapper {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    padding: 8px 15px;
+    color: #fff;
+    background-color: var(--app-blue);
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--app-blue-hover);
+}
