@@ -112,15 +112,36 @@ form {
 }
 
 label {
-    width: 50%;
     padding-top: 12px;
+    display: flex;
 }
 
-.btn-wrapper p {
-    width: 50%;
+label h2 {
+    font-size: 19px;
+    margin-left: 6px;
+    font-weight: 400;
+    color: #fff;
+}
+
+form p {
     color: rgb(255, 0, 0);
     font-size: 13px;
-    margin-top: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.file-filename {
+    width: 100%;
+    display: flex;
+}
+
+#file-upload-filename {
+    font-size: 13px;
+    text-align: left;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 10px;
+    width: 100%;
 }
 
 .fa-image {

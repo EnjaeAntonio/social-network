@@ -17,16 +17,32 @@ const errorOutput = select('.error-output')
 /*****************************************
         Creating new User
 *****************************************/
-function newUser(id, name, userName, email) {
-    const createUser = new User(id, name, userName, email)
-    return createUser
+function newUser() {
+
+const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
+return user.getInfo()
+
 };
 
+
+
+
+/*****************************************
+        Creating new Subscriber
+*****************************************/
+function newSub() {
+
+        const sub = new Subscriber(3, 5, false)
+        
+        return sub.getInfo()
+        
+        };
 /*****************************************
         Post Content
 *****************************************/
 
 function userPost(){
+
         let userPost = postText.value;
 
         if (userPost == '') {
@@ -42,12 +58,15 @@ function userPost(){
                 let postContentHeader = create('div');
                 postContentHeader.className = 'content-header';
                 postContentWrapper.append(postContentHeader);
+
                 let profilePic = create('img');
                 profilePic.src = "./assets/img/gokus.png";
                 postContentHeader.append(profilePic);
+
                 let userName = create('h1');
                 userName.innerText = 'Enjae Antonio'
                 postContentHeader.append(userName)
+                
                 let date = create('p');
                 date.innerText = 'Nov 28, 2022';
                 postContentHeader.append(date)
@@ -62,7 +81,28 @@ function userPost(){
         }
 
 }       
-    
+
+/*****************************************
+        Show file name
+*****************************************/
+
+let input = document.getElementById( 'file-upload' );
+let infoArea = document.getElementById( 'file-upload-filename' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+
+  input = event.srcElement;
+
+  let fileName = input.files[0].name;
+  
+
+  infoArea.textContent =  fileName;
+}
+
 onEvent('click', postBtn, function(){
-        userPost(newUser())
+        userPost()
+        console.log(newUser())
 });

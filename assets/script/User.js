@@ -37,6 +37,8 @@ class User {
     }
 }
 
+const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
+
 class Subscriber extends User {
     #pages;
     #groups;
