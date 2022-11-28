@@ -58,7 +58,7 @@ function userPost(selectedFile){
         // window.URL = window.URL || window.webkitURL;
         // let url = URL.createObjectURL(selectedFile.files[0])
         
-        if (userPost == '') {
+        if (userPost == '' ) {
                 errorOutput.innerText = 'Fields are empty'
         } else {
 
@@ -104,8 +104,6 @@ onEvent('click', userInfoBtn, function() {
           x.style.display = "none";
         } else 
           x.style.display = "block";
-          newUser()
-          newSub()
       });
 
 
