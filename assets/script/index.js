@@ -20,6 +20,7 @@ const selectedFile = select('.file-upload')
 
 const userInfo = select('.user-info');
 const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
+
 userInfo.innerHTML = `
         <h3>Your Profile</h3>
         <p><span>ID: </span>${user.id}</p>
@@ -39,7 +40,7 @@ userInfo.innerHTML = `
 const subInfo = select('.sub-info');
 const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
 subInfo.innerHTML = `
-        <h3>Subscribtior</h3>
+        <h3>Subscribtion</h3>
         <p><span>Pages: </span>${sub.pages}</p>
         <p><span>Groups: </span>${sub.groups}</p>
         <p><span>Monetized: </span>${sub.canMonetize}</p>
@@ -88,16 +89,14 @@ input.addEventListener( 'change', showFileName );
 
 function showFileName( event ) {
   
-
   input = event.srcElement;
-
   let fileName = input.files[0].name;
-  
-
   infoArea.textContent =  fileName;
 }
 
-
+/*****************************************
+        Display Profile
+*****************************************/
 let userInfoBtn = select('.info-btn')
 onEvent('click', userInfoBtn, function() {
         let x = select('.user-sub-info');
@@ -108,6 +107,8 @@ onEvent('click', userInfoBtn, function() {
           newUser()
           newSub()
       });
+
+
 
 onEvent('click', postBtn, function(){
         userPost()
