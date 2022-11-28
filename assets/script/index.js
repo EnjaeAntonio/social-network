@@ -59,9 +59,9 @@ function userPost(selectedFile){
         // let url = URL.createObjectURL(selectedFile.files[0])
         
         if (userPost == '' ) {
-                errorOutput.innerText = 'Fields are empty'
+                errorOutput.innerText = 'Fields are empty';
         } else {
-
+                errorOutput.innerText = '';
                 let newDiv = create('div');
                 newDiv.className = 'content'
                 newDiv.innerHTML = `
