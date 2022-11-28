@@ -40,7 +40,7 @@ userInfo.innerHTML = `
 const subInfo = select('.sub-info');
 const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
 subInfo.innerHTML = `
-        <h3>Subscribtion</h3>
+        <h3>Subscription</h3>
         <p><span>Pages: </span>${sub.pages}</p>
         <p><span>Groups: </span>${sub.groups}</p>
         <p><span>Monetized: </span>${sub.canMonetize}</p>
