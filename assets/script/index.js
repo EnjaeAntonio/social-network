@@ -34,6 +34,7 @@ const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com
 /*****************************************
         Creating new Subscriber
 *****************************************/
+
 const subInfo = select('.sub-info');
 const sub = new Subscriber(['Buy and Sell'], ['Keewatin Community Group'], 'False');
 
@@ -66,6 +67,7 @@ function userPost(){
         // Validating empty fields
         if (userPost == '' && selectedFile.value == '') {
                 errorOutput.innerText = 'Fields are empty';
+
         }  else if (selectedFile.value) {
                 
                 // Obtaining path of selected file
@@ -115,9 +117,6 @@ function userPost(){
                 postText.value = '';
 
         }
-                
-        
-
 }       
 
 /*****************************************
