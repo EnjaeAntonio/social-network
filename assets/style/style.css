@@ -92,15 +92,14 @@ span {
     color: #607dbc;
     font-weight: 600;
 }
-/* .user-info p {
-    color: #fff;
+
+.fa-solid {
+    margin: auto 10px auto 0px;
+    font-size: 22px;
 }
 
-.sub-info p {
-    color: #fff;
-} */
-
 h3 {
+    display: flex;
     color: #000;
     font-size: 28px;
     margin: 10px 0;
@@ -113,11 +112,15 @@ picture{
     margin-top: 8px;
 }
 
-img {
+.avatar-pic {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+img {
+    padding: 5px;
 }
 
 .post-wrapper {
