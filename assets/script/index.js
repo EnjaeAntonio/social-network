@@ -33,8 +33,6 @@ userInfo.innerHTML = `
 /*****************************************
         Creating new Subscriber
 *****************************************/
-
-
 const subInfo = select('.sub-info');
 const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
 
@@ -53,19 +51,22 @@ subInfo.innerHTML = `
 *****************************************/
 
 function userPost(){
-
+        // Variables for function
         let userPost = postText.value;
         let todaysDate = new Date();
         let img = select('.avatar').innerHTML;
         const selectedFile = document.getElementById('file-upload')
    
-
+        // Validating empty fields
         if (userPost == '' && selectedFile.value == '') {
                 errorOutput.innerText = 'Fields are empty';
         }  else if (selectedFile.value) {
-
+                
+                // Obtaining path of selected file
                 let url = URL.createObjectURL(selectedFile.files[0])
                 errorOutput.innerText = '';
+
+                // Creating div element
                 let newDiv = create('div');
                 newDiv.className = 'content'
                 newDiv.innerHTML = `
@@ -77,12 +78,14 @@ function userPost(){
                         <p class="user-output">${postText.value}</p>
                         <img class="user-img" src="${url}"/>
                         `      
+                // Prepening and also resetting values
                 parentPostContent.prepend(newDiv)
                 postText.value = ''
                 document.getElementById('file-upload').value = '';
                 infoArea.textContent = '';
         } else {
 
+                // If a picture is not selected, text box will still post
                 errorOutput.innerText = '';
                 let newDiv = create('div');
                 newDiv.className = 'content'
