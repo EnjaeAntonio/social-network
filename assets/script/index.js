@@ -35,7 +35,7 @@ const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com
         Creating new Subscriber
 *****************************************/
 const subInfo = select('.sub-info');
-const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
+const sub = new Subscriber(['Buy and Sell'], ['Keewatin Community Group'], 'False');
 
         subInfo.innerHTML = `
                 <div class="sub-wrapper">
@@ -56,6 +56,10 @@ function userPost(){
         // Variables for function
         let userPost = postText.value;
         let todaysDate = new Date();
+        let currentTime = new Date();
+        let currentHours = currentTime.getHours().toString();
+        let currentMinutes = currentTime.getMinutes().toString().padStart('2', 0)
+        let ampm = currentHours >= 12 ? 'pm' : 'am';
         let img = select('.avatar').innerHTML;
         const selectedFile = document.getElementById('file-upload');
    
@@ -80,6 +84,7 @@ function userPost(){
                         </div>
                         <p class="user-output">${postText.value}</p>
                         <img class="user-img" src="${url}"/>
+                        <h4 class="clock">${currentHours}:${currentMinutes} ${ampm}</h4>
                         `;
 
                 // Prepening and also resetting values
@@ -103,6 +108,7 @@ function userPost(){
                                 <p>${todaysDate.toDateString()}</p>
                         </div>
                         <p class="user-output">${postText.value}</p>
+                        <h4 class"clock">${currentHours}:${currentMinutes} ${ampm}</h4>
                         `;
 
                 parentPostContent.prepend(newDiv);

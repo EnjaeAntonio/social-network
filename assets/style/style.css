@@ -5,6 +5,7 @@
 /* ---------------------------------------------------- */
 
 :root {
+    --app-blue-fb: #607dbc;
     --app-dark-bg: #1a1d28;
     --app-light-bg: #f0f2f4;
     --app-red: #ff3c57;
@@ -41,7 +42,7 @@ header {
 .title h1 {
     font-size: 22px;
     font-weight: 400;
-    color: #607dbc;
+    color: var(--app-blue-fb);
     line-height: 56px;
     letter-spacing: 0.2px;
 }
@@ -105,11 +106,12 @@ nav ul li + li {
 
 span {
     font-size: 22px;
-    color: #607dbc;
+    color: var(--app-blue-fb);
     font-weight: 600;
 }
 
 .fa-solid {
+    color: var(--app-blue-fb);
     margin: auto 10px auto 0px;
     font-size: 22px;
 }
@@ -272,6 +274,13 @@ button:hover {
 }
 .user-output{
     padding: 10px 15px;
+}
+
+h4 {
+    font-weight: 400;
+    color: rgb(65, 65, 65);
+    text-align: right;
+    padding: 0 7px 5px 0;
 }
 
 @media (max-width: 1180px ){
