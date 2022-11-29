@@ -10,15 +10,15 @@ import { User, Subscriber } from './User.js';
 
 const postText = select('.content-input');
 const postBtn = select('.post-btn');
-const parentPostContent = select('.post')
-const errorOutput = select('.error-output')
+const parentPostContent = select('.post');
+const errorOutput = select('.error-output');
 
 /*****************************************
         Creating new User
 *****************************************/
 
 const userInfo = select('.user-info');
-const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com')
+const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com');
 
 userInfo.innerHTML = `
         <div class="user-wrapper">
@@ -55,7 +55,7 @@ function userPost(){
         let userPost = postText.value;
         let todaysDate = new Date();
         let img = select('.avatar').innerHTML;
-        const selectedFile = document.getElementById('file-upload')
+        const selectedFile = document.getElementById('file-upload');
    
         // Validating empty fields
         if (userPost == '' && selectedFile.value == '') {
@@ -63,7 +63,7 @@ function userPost(){
         }  else if (selectedFile.value) {
                 
                 // Obtaining path of selected file
-                let url = URL.createObjectURL(selectedFile.files[0])
+                let url = URL.createObjectURL(selectedFile.files[0]);
                 errorOutput.innerText = '';
 
                 // Creating div element
@@ -77,10 +77,10 @@ function userPost(){
                         </div>
                         <p class="user-output">${postText.value}</p>
                         <img class="user-img" src="${url}"/>
-                        `      
+                        `;
                 // Prepening and also resetting values
-                parentPostContent.prepend(newDiv)
-                postText.value = ''
+                parentPostContent.prepend(newDiv);
+                postText.value = '';
                 document.getElementById('file-upload').value = '';
                 infoArea.textContent = '';
         } else {
@@ -96,9 +96,9 @@ function userPost(){
                                 <p>${todaysDate.toDateString()}</p>
                         </div>
                         <p class="user-output">${postText.value}</p>
-                        `      
-                parentPostContent.prepend(newDiv)
-                postText.value = ''
+                        `;
+                parentPostContent.prepend(newDiv);
+                postText.value = '';
 
         }
                 
@@ -139,5 +139,5 @@ onEvent('click', userInfoBtn, function() {
         OnEvent handler
 *****************************************/
 onEvent('click', postBtn, function(){
-        userPost()
+        userPost();
 });
