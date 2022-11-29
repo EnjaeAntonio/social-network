@@ -29,9 +29,6 @@ userInfo.innerHTML = `
         <p><span >Email: </span>${user.email}</p>
 `;
 
-
-
-
 /*****************************************
         Creating new Subscriber
 *****************************************/
@@ -39,12 +36,14 @@ userInfo.innerHTML = `
 
 const subInfo = select('.sub-info');
 const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
+
 subInfo.innerHTML = `
         <h3>Subscription</h3>
         <p><span>Pages: </span>${sub.pages}</p>
         <p><span>Groups: </span>${sub.groups}</p>
         <p><span>Monetized: </span>${sub.canMonetize}</p>
 `;
+
 
 /*****************************************
         Post Content
@@ -58,9 +57,9 @@ function userPost(selectedFile){
         // window.URL = window.URL || window.webkitURL;
         // let url = URL.createObjectURL(selectedFile.files[0])
         
-        if (userPost == '' ) {
+        if (userPost == '') {
                 errorOutput.innerText = 'Fields are empty';
-        } else {
+        }  else {
                 errorOutput.innerText = '';
                 let newDiv = create('div');
                 newDiv.className = 'content'
