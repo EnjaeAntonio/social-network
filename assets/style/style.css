@@ -6,6 +6,7 @@
 
 :root {
     --app-dark-bg: #1a1d28;
+    --app-light-bg: #f0f2f4;
     --app-red: #ff3c57;
     --app-green: #33ab4e;
     --app-purple: #833cff;
@@ -76,6 +77,15 @@ nav ul li a:hover {
 nav ul li + li {
     margin-left: 18px;
 }
+
+.user-wrapper {
+    margin-bottom: 20px;
+}
+
+.user-wrapper, .sub-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 5px 10px;
+    }
 
 .user-sub-info{
     display: none;
@@ -233,12 +243,13 @@ button:hover {
 
 .content-header h1 {
     font-weight: 400;
-    
+    margin-top: 5px;
 }
 
 .content-header p {
     display: inline;
     margin-left: auto;
+    margin-top: 5px;
     line-height: 40px;
 }
 
@@ -246,6 +257,5 @@ button:hover {
     padding: 10px 0;
 }
 .user-output{
-    padding: 10px 20px;
-    margin: 10px 20px;
+    padding: 10px 15px;
 }
