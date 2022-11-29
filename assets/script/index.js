@@ -20,15 +20,15 @@ const errorOutput = select('.error-output');
 const userInfo = select('.user-info');
 const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com');
 
-userInfo.innerHTML = `
-        <div class="user-wrapper">
-                <h3><i class="fa-solid fa-user"></i>Profile</h3>
-                <p><span>ID: </span>${user.id}</p>
-                <p><span >Name: </span>${user.name}</p>
-                <p><span >User Name: </span>${user.userName}</p>
-                <p><span >Email: </span>${user.email}</p>
-        </div>
-`;
+        userInfo.innerHTML = `
+                <div class="user-wrapper">
+                        <h3><i class="fa-solid fa-user"></i>Profile</h3>
+                        <p><span>ID: </span>${user.id}</p>
+                        <p><span>Name: </span>${user.name}</p>
+                        <p><span>User Name: </span>${user.userName}</p>
+                        <p><span>Email: </span>${user.email}</p>
+                </div>
+        `;
 
 /*****************************************
         Creating new Subscriber
@@ -36,14 +36,14 @@ userInfo.innerHTML = `
 const subInfo = select('.sub-info');
 const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False');
 
-subInfo.innerHTML = `
-        <div class="sub-wrapper">
-                <h3><i class="fa-solid fa-check"></i>Subscription</h3>
-                <p><span>Pages: </span>${sub.pages}</p>
-                <p><span>Groups: </span>${sub.groups}</p>
-                <p><span>Monetized: </span>${sub.canMonetize}</p>
-        </div>
-`;
+        subInfo.innerHTML = `
+                <div class="sub-wrapper">
+                        <h3><i class="fa-solid fa-check"></i>Subscription</h3>
+                        <p><span>Pages: </span>${sub.pages}</p>
+                        <p><span>Groups: </span>${sub.groups}</p>
+                        <p><span>Monetized: </span>${sub.canMonetize}</p>
+                </div>
+        `;
 
 
 /*****************************************
@@ -69,6 +69,7 @@ function userPost(){
                 // Creating div element
                 let newDiv = create('div');
                 newDiv.className = 'content'
+
                 newDiv.innerHTML = `
                         <div class="content-header">
                                 ${img}
@@ -78,17 +79,21 @@ function userPost(){
                         <p class="user-output">${postText.value}</p>
                         <img class="user-img" src="${url}"/>
                         `;
+
                 // Prepening and also resetting values
                 parentPostContent.prepend(newDiv);
                 postText.value = '';
                 document.getElementById('file-upload').value = '';
                 infoArea.textContent = '';
+
         } else {
 
                 // If a picture is not selected, text box will still post
+                // (I get a bug if a picture is not selected)
                 errorOutput.innerText = '';
                 let newDiv = create('div');
                 newDiv.className = 'content'
+
                 newDiv.innerHTML = `
                         <div class="content-header">
                                 ${img}
@@ -97,6 +102,7 @@ function userPost(){
                         </div>
                         <p class="user-output">${postText.value}</p>
                         `;
+
                 parentPostContent.prepend(newDiv);
                 postText.value = '';
 
