@@ -99,6 +99,8 @@ nav ul li + li {
     background-color: #fff;
     padding: 15px;
     width: 19%;
+    border-radius: 5px;
+
 }
 
 span {
