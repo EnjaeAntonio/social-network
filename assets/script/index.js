@@ -78,7 +78,9 @@ function userPost(){
                         <img class="user-img" src="${url}"/>
                         `      
                 parentPostContent.prepend(newDiv)
-
+                postText.value = ''
+                document.getElementById('file-upload').value = '';
+                infoArea.textContent = '';
         } else {
 
                 errorOutput.innerText = '';
@@ -93,6 +95,7 @@ function userPost(){
                         <p class="user-output">${postText.value}</p>
                         `      
                 parentPostContent.prepend(newDiv)
+                postText.value = ''
 
         }
                 

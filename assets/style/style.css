@@ -96,7 +96,7 @@ nav ul li + li {
     position: absolute;
     right: 225px;
     text-align: left;
-    background-color: #fff;
+    background-color: var(--app-light-bg);
     padding: 15px;
     width: 19%;
     border-radius: 5px;
@@ -114,6 +114,15 @@ span {
     font-size: 22px;
 }
 
+/* 
+.user-info p{
+    color: #fff;
+
+}
+
+.sub-info p{
+    color: #fff;
+} */
 h3 {
     display: flex;
     color: #000;
@@ -232,7 +241,7 @@ button:hover {
 }
 
 .content {
-    background-color: #fff;
+    background-color: var(--app-light-bg);
     width: 620px;
     margin: 10px 0;
 }
