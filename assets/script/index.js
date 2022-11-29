@@ -135,7 +135,9 @@ onEvent('click', userInfoBtn, function() {
       });
 
 
-
+/*****************************************
+        OnEvent handler
+*****************************************/
 onEvent('click', postBtn, function(){
         userPost()
 });
