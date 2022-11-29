@@ -63,6 +63,7 @@ function userPost(){
         if (userPost == '' && selectedFile.value == '') {
                 errorOutput.innerText = 'Fields are empty';
         }  else if (selectedFile.value) {
+
                 let url = URL.createObjectURL(selectedFile.files[0])
                 errorOutput.innerText = '';
                 let newDiv = create('div');
@@ -77,7 +78,9 @@ function userPost(){
                         <img src="${url}"/>
                         `      
                 parentPostContent.prepend(newDiv)
+
         } else {
+                        
                 errorOutput.innerText = '';
                 let newDiv = create('div');
                 newDiv.className = 'content'
