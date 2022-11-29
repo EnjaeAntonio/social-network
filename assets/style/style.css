@@ -78,6 +78,10 @@ nav ul li + li {
     margin-left: 18px;
 }
 
+.resp-nav {
+    display: none;
+}
+
 .user-wrapper {
     margin-bottom: 20px;
 }
@@ -129,7 +133,7 @@ picture{
     cursor: pointer;
 }
 
-img {
+.user-img {
     padding: 15px;
 }
 
@@ -257,4 +261,51 @@ button:hover {
 }
 .user-output{
     padding: 10px 15px;
+}
+
+@media (max-width: 1180px ){
+    .post-wrapper {
+        display: block;
+    }
+    .user-sub-info {
+        width: 100%;
+        position: none;
+        right: 0;
+    }
+}
+
+@media (max-width: 833px) {
+    header {
+        width: 100%;
+    }
+    .title {
+        width: 50%;
+    }
+    picture {
+        width: 50%;
+    }
+    nav {
+        display: none;
+    }
+    .resp-nav {
+        display: flex;
+        width: 100%;
+    }
+    .resp-nav ul li a {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: #000;
+    }
+    .content {
+        width: 100%;
+    }
+
+    .post-wrapper {
+        display: block;
+    }
+    .user-sub-info {
+        width: 100%;
+        position: none;
+        right: 0;
+    }
 }

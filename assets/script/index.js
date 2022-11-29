@@ -75,12 +75,12 @@ function userPost(){
                                 <p>${todaysDate.toDateString()}</p>
                         </div>
                         <p class="user-output">${postText.value}</p>
-                        <img src="${url}"/>
+                        <img class="user-img" src="${url}"/>
                         `      
                 parentPostContent.prepend(newDiv)
 
         } else {
-                        
+
                 errorOutput.innerText = '';
                 let newDiv = create('div');
                 newDiv.className = 'content'
