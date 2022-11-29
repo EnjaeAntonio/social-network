@@ -2,8 +2,9 @@
 
 import {onEvent, select, selectAll, create, log} from './utils.js';
 
-import { User, Subscriber } from './User.js';
+import { User } from './User.js';
 
+import { Subscriber } from './Subscriber.js';
 /*****************************************
         Variables
 *****************************************/
@@ -51,6 +52,7 @@ const sub = new Subscriber(['Shoe Market'], ['Keewatin Community Group'], 'False
 *****************************************/
 
 function userPost(){
+
         // Variables for function
         let userPost = postText.value;
         let todaysDate = new Date();
