@@ -5,7 +5,7 @@
 /* ---------------------------------------------------- */
 
 :root {
-    --app-blue-fb: #607dbc;
+    --app-main-blue: #257aff;
     --app-dark-bg: #1a1d28;
     --app-light-bg: #f0f2f4;
     --app-red: #ff3c57;
@@ -17,11 +17,12 @@
 }
 
 body {
-    background-color: var(--app-dark-bg);
+    height: 100vh;
+    background-color: var(--app-light-bg);
 }
 
 .container {
-    width: min(100% - 30px, 880px);
+    width: min(100% - 30px, 1480px);
     margin-inline: auto;
 }
 /* ---------------------------------------------------- */
@@ -29,7 +30,7 @@ body {
 /* ---------------------------------------------------- */
 header {
     height: 56px;
-    background-color: #1f2128;
+    background-color: #fff;
 }
 
 .flexbox {
@@ -37,20 +38,20 @@ header {
 }
 
 .title {
-    width: 25%;
+    width: 33%;
     height: 40px;
 }
 
 .title h1 {
     font-size: 22px;
     font-weight: 400;
-    color: var(--app-blue-fb);
+    color: var(--app-main-blue);
     line-height: 56px;
     letter-spacing: 0.2px;
 }
 
 nav {
-    width: 50%;
+    width: 30%;
     text-align: right;
 }
 
@@ -67,7 +68,10 @@ nav ul li{
 nav ul li a {
     font-size: 14px;
     letter-spacing: 1px;
-    color: #fff;
+    background: var(--app-main-blue);
+    background: linear-gradient(90deg, rgba(102,162,255,1) 0%, rgba(37,122,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -87,48 +91,19 @@ nav ul li + li {
     display: none;
 }
 
-.user-wrapper {
-    margin-bottom: 20px;
-}
-
-.user-wrapper, .sub-wrapper {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        padding: 5px 10px;
-    }
-
-.user-sub-info{
-    display: none;
-    position: absolute;
-    right: 225px;
-    text-align: left;
-    background-color: var(--app-light-bg);
-    padding: 15px;
-    width: 19%;
-    border-radius: 5px;
-
-}
 
 span {
     font-size: 22px;
-    color: var(--app-blue-fb);
+    color: var(--app-main-blue);
     font-weight: 600;
 }
 
 .fa-solid {
-    color: var(--app-blue-fb);
+    color: var(--app-main-blue);
     margin: auto 10px auto 0px;
     font-size: 22px;
 }
 
-/* 
-.user-info p{
-    color: #fff;
-
-}
-
-.sub-info p{
-    color: #fff;
-} */
 
 /* ---------------------------------------------------- */
 /*     Post Content Field                               */
@@ -144,7 +119,7 @@ h3 {
 picture{
     display: grid;
     justify-content: right;
-    width: 25%;
+    width: 38%;
     margin-top: 8px;
 }
 
@@ -160,22 +135,45 @@ picture{
 }
 
 .post-wrapper {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form {
-    margin-top: 20px;
+.fa-brands {
+    padding-right: 5px;
 }
 
+.fa-github {
+    color: #000;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+li {
+    list-style: none;
+}
+
+.user-links li a{
+    overflow: hidden;
+    color: #0645AD;
+}
+
+h2 {
+    width: 100%;
+}
+
+
 .form-wrapper{
-    background-color: #1f2128;
+    background-color: #fff;
     width: 100%;
     padding: 12px 12px 12px 15px;
     justify-content: space-between;
     flex-direction: column;
     display: flex;
+    margin-top: 50px;
 }
 
 label {
@@ -190,7 +188,7 @@ label h2 {
     color: #fff;
 }
 
-form p {
+.error-output {
     color: rgb(255, 0, 0);
     font-size: 13px;
     margin: 15px 0;
@@ -225,8 +223,8 @@ input[type="file"] {
 }
 
 textarea {
-    background-color: #1f2128;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     resize: none;
 }
 
@@ -241,11 +239,10 @@ button{
     color: rgb(255, 255, 255, 1);
     background-color: var(--app-blue);
     border-radius: 5px;
-    transition: all .3s ease-in-out;
 }
 
-button:hover {
-    background-color: var(--app-blue-hover);
+.post-btn:hover {
+    background: rgb(64, 124, 213);
 }
 
 /* ---------------------------------------------------- */
@@ -261,7 +258,7 @@ button:hover {
 }
 
 .content {
-    background-color: var(--app-light-bg);
+    background-color: #fff;
     width: 100vh;
     margin: 10px 0;
 }
@@ -297,6 +294,40 @@ h4 {
     color: rgb(65, 65, 65);
     text-align: right;
     padding: 0 7px 5px 0;
+}
+
+/* ---------------------------------------------------- */
+/* Footer
+/* ---------------------------------------------------- */
+
+footer {
+    background-color: var(--app-dark-bg);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50vh;
+    width: 100%;
+}
+
+.footer-nav{
+    width: 100%;
+}
+
+.footer-nav a {
+    color: rgb(255, 255, 255);
+}
+
+.social-media{
+    text-align: center;
+}
+
+
+.copyright{
+    text-align: center;
+}
+
+.footer-icon{
+    font-size: 24px;
 }
 
 /* ---------------------------------------------------- */

@@ -18,34 +18,14 @@ const errorOutput = select('.error-output');
         Creating new User
 *****************************************/
 
-const userInfo = select('.user-info');
 const user = new User(34369, 'Enjae Antonio', 'EnjaeAC', 'enjaeantonio@gmail.com');
 
-        userInfo.innerHTML = `
-                <div class="user-wrapper">
-                        <h3><i class="fa-solid fa-user"></i>Profile</h3>
-                        <p><span>ID: </span>${user.id}</p>
-                        <p><span>Name: </span>${user.name}</p>
-                        <p><span>User Name: </span>${user.userName}</p>
-                        <p><span>Email: </span>${user.email}</p>
-                </div>
-        `;
 
 /*****************************************
         Creating new Subscriber
 *****************************************/
 
-const subInfo = select('.sub-info');
-const sub = new Subscriber(['Buy and Sell'], ['Keewatin Community Group'], 'False');
 
-        subInfo.innerHTML = `
-                <div class="sub-wrapper">
-                        <h3><i class="fa-solid fa-check"></i>Subscription</h3>
-                        <p><span>Pages: </span>${sub.pages}</p>
-                        <p><span>Groups: </span>${sub.groups}</p>
-                        <p><span>Monetized: </span>${sub.canMonetize}</p>
-                </div>
-        `;
 
 /*****************************************
         Post Content
@@ -156,3 +136,4 @@ onEvent('click', userInfoBtn, function() {
 onEvent('click', postBtn, function(){
         userPost();
 });
+
