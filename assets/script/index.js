@@ -47,7 +47,6 @@ const sub = new Subscriber(['Buy and Sell'], ['Keewatin Community Group'], 'Fals
                 </div>
         `;
 
-
 /*****************************************
         Post Content
 *****************************************/
@@ -133,6 +132,7 @@ function showFileName( event ) {
   input = event.srcElement;
   let fileName = input.files[0].name;
   infoArea.textContent =  fileName;
+
 }
 
 /*****************************************
@@ -140,11 +140,13 @@ function showFileName( event ) {
 *****************************************/
 let userInfoBtn = select('.info-btn')
 onEvent('click', userInfoBtn, function() {
+
         let x = select('.user-sub-info');
         if (x.style.display === "block") {
           x.style.display = "none";
         } else 
           x.style.display = "block";
+          
       });
 
 
